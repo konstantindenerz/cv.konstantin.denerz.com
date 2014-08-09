@@ -1,0 +1,360 @@
+@import 'core';
+@media not print {
+  .about {
+    @about-height: 380px;
+    background: white;
+    height: @about-height;
+    color: @text-light;
+
+    .menu-button {
+      cursor: pointer;
+
+      left: 0;
+      img {
+        width: 30px;
+        margin-top: 3px;
+      }
+    }
+
+    .about-small {
+      color: @text-dark;
+      height: 45px;
+      position: fixed;
+      display: none;
+      @skills-bg: #e8e8e7;
+      @skills-bg-second: #f2f2f2;
+      background: @skills-bg;
+      background: -moz-linear-gradient(top, @skills-bg-second 0%, @skills-bg 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@skills-bg-second), color-stop(100%,@skills-bg)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, @skills-bg-second 0%,@skills-bg 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  @skills-bg-second 0%, @skills-bg 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  @skills-bg-second 0%, @skills-bg 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  @skills-bg-second 0%, @skills-bg 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{skills-bg-second}', endColorstr='@{skills-bg}',GradientType=0 ); /* IE6-9 */
+
+      cursor:default;
+      z-index: 500000;
+      font-family: quicksandregular;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      border-bottom: 1px solid white;
+
+      .subtitle {
+        white-space: nowrap;
+        font-size: 10px;
+        padding-left: 25px;
+      }
+
+      .subtitle.small {
+        padding-left: 15px;
+      }
+      .name {
+        letter-spacing: 2px;
+
+      }
+      .slogan {
+        color: #aaaaaa;
+      }
+      td {
+        padding: 5px;
+      }
+      .portrait{
+        width: 35px;
+        img {
+          border: 1px solid #FAFAFA;
+          border-radius: 30px;
+          width: 35px;
+        }
+      }
+    }
+
+    .about-big:hover {
+      color: rgba(255,255,255,0.2);
+      .firstname,
+      .lastname{
+        text-shadow: 1px 1px 0 transparent;
+      }
+    }
+
+    .about-big{
+      height: 100%;
+
+      td {
+          vertical-align: bottom;
+          padding: 0 20px;
+      }
+      .subtitle {
+        font-size: 16px;
+        height: 150px;
+      }
+
+      .name {
+        cursor:default;
+        vertical-align: top;
+      }
+
+      .portrait {
+        display: none;
+      }
+
+      .firstname,
+      .lastname {
+        font-size: 46px;
+        height: 50px;
+        text-transform: uppercase;
+        letter-spacing: 12px;
+        text-shadow: 1px 1px 0 rgba(100,100,100,0.4)
+      }
+
+      .slogan {
+        color: @text-dark;
+        letter-spacing: 1px;
+        background: rgba(240,240,240,0.3);
+        text-align: right;
+        font-size: 13px;
+        padding-bottom: 8px;
+        padding-right: 0;
+        height: 40px;
+        span {
+          background: white;
+          padding: 5px;
+          white-space: nowrap;
+        }
+        .menu-button {
+          margin-left: 25px;
+          margin-top: -12px;
+          position: absolute;
+        }
+      }
+    }
+
+
+    .background {
+      position: absolute;
+      height: @about-height;
+      .image {
+        height: @about-height;
+        width: 100%;
+        position: absolute;
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .default {
+        background-image:url("@{assets}/about.jpg@{rev}");
+      }
+
+      .default-2 {
+        background-image:url("@{assets}/about2.png@{rev}");
+        background-position: 40px center;
+        background-size: auto 100%;
+      }
+
+      .blurred {
+        background-image:url("@{assets}/about-blurred.jpg@{rev}");
+      }
+
+      .blurred-2 {
+        background-image:url("@{assets}/about2-blurred.png@{rev}");
+        background-position: 40px center;
+        background-size: auto 100%;
+      }
+
+    }
+  }
+
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .about {
+    .background {
+      .default-2 {
+        background-image:url("@{assets}/about3.png@{rev}");
+        background-position: left center;
+      }
+
+      .blurred-2 {
+        background-image:url("@{assets}/about3-blurred.png@{rev}");
+        background-position: left center;
+      }
+
+    }
+
+    .about-big {
+      .subtitle {
+        font-size: 18px;
+        height: 200px;
+
+      }
+
+      .subtitle,
+      .name {
+        padding-left: 140px;
+      }
+
+      .firstname,
+      .lastname {
+          font-size: 36px;
+          height: 26px;
+          letter-spacing: 2px;
+      }
+
+      .slogan {
+        text-align: right;
+        font-size: 13px;
+        padding-bottom: 8px;
+      }
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .about {
+    .background {
+
+
+      .default-2 {
+        visibility: hidden;
+      }
+
+      .blurred-2 {
+        visibility: hidden;
+      }
+
+      .blurred {
+        visibility: hidden;
+      }
+
+    }
+
+    .about-big {
+      .subtitle {
+        font-size: 12px;
+        height: 240px;
+      }
+
+      .subtitle,
+      .name {
+        padding-left: 20px;
+      }
+
+      .firstname,
+      .lastname {
+          font-size: 26px;
+          height: 26px;
+          letter-spacing: 2px;
+      }
+
+      .slogan {
+        text-align: right;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .about {
+    .about-big {
+      .slogan {
+        .menu-button {
+            margin-left:5px;
+        }
+      }
+    }
+    .about-small {
+      .name {
+        letter-spacing: 0;
+      }
+
+      .portrait {
+        margin-right: 10px;
+      }
+    }
+
+    .background {
+
+      .default {
+        background-image:url("@{assets}/about-small.jpg@{rev}");
+        background-position: center center;
+      }
+
+      .blurred {
+        background-image:none;
+        background-position: center center;
+      }
+
+    }
+  }
+}
+
+@media only print {
+  .about {
+    height: 800px;
+    text-align: center;
+
+    .about-big {
+      background: red;
+
+      .subtitle {
+        padding: 125px 0 15px 0;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+
+      .firstname,
+      .lastname {
+        display: inline;
+        font-size: 32px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+      .name {
+        padding-bottom: 80px;
+      }
+      .firstname {
+        padding-right: 10px;
+      }
+
+      .portrait {
+        .photo{
+            width:190px;
+            height:190px;
+            margin: auto;
+            border-radius:50%;
+            overflow: hidden;
+            img {
+              border:1px solid rgb(240,240,240);
+              display: block;
+
+            }
+        }
+      }
+
+      .menu-button {
+          display: none;
+      }
+
+      .slogan {
+        padding-top: 110px;
+        padding-bottom: 130px;
+        font-size: 16px;
+      }
+
+
+    }
+
+
+  }
+
+  .about-small,
+  .background {
+    display: none !important;
+  }
+
+}

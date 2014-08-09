@@ -1,0 +1,239 @@
+@import 'core';
+
+@media not print {
+
+  .common {
+    .print {display:none;}
+    @container-bg-color: #a7dc51;
+    @-webkit-keyframes itemClick {
+      from {
+          width: 70px;
+          height: 70px;
+      }
+      to {
+         width: 60px;
+         height: 60px;
+         margin-top:5px;
+         background: darken(@container-bg-color, 20%);
+      }
+    }
+    @skills-bg: #e8e8e7;
+    @skills-bg-second: #f2f2f2;
+    background: @skills-bg;
+    background: -moz-linear-gradient(top, @skills-bg-second 0%, @skills-bg 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@skills-bg-second), color-stop(100%,@skills-bg)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @skills-bg-second 0%,@skills-bg 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  @skills-bg-second 0%, @skills-bg 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  @skills-bg-second 0%, @skills-bg 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  @skills-bg-second 0%, @skills-bg 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{skills-bg-second}', endColorstr='@{skills-bg}',GradientType=0 ); /* IE6-9 */
+
+    .title-container {
+      background: @container-bg-color;
+      cursor:default;
+      font-size: 23px;
+      text-align: center;
+      letter-spacing: 5px;
+      width: 200px;
+      height: 65px;
+      padding-top: 20px;
+      margin-left: 65px;
+      h3 {
+        margin: 0;
+      }
+    }
+
+    table {
+      margin-top: 20px;
+      width:100%;
+      text-align:center;
+      tr {
+        min-height: 200px;
+          td {
+            vertical-align: top;
+            padding: 15px;
+          }
+      }
+
+    }
+    .item:active {
+        .img-container {
+          img.bg{
+            -webkit-animation-name: itemClick;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-duration: 100ms;
+            -webkit-animation-fill-mode: forwards;
+          }
+          .number {
+            font-size: 36px;
+            margin-top: -55px;
+          }
+          img.locked {
+            margin-top: -120px;
+          }
+        }
+    }
+
+    .item {
+      cursor: pointer;
+      text-align:center;
+      width: 100%;
+      min-height: 200px;
+      .img-container {
+
+        width: 70px;
+        height: 70px;
+        margin: auto;
+        img.bg {
+          border-radius: 100px;
+        }
+      }
+
+      .title {
+        padding: 5px;
+      }
+
+
+      .img-container {
+        .number {
+          font-size: 46px;
+          margin-top: -65px;
+        }
+      }
+      .arrow {
+        display: none;
+        width:0;
+        height:0;
+        margin: auto;
+        border-style:solid;
+        border-width:0 5px 10px;
+        border-color:transparent transparent #dadada;
+      }
+      .content-container {
+        display: none;
+        padding: 15px;
+        background: #dadada;
+      }
+    }
+
+    .item.selected {
+       .img-container img.bg {
+         background: @container-bg-color;
+       }
+       .arrow{
+         display: block;
+       }
+
+       .content-container {
+         display: block;
+       }
+    }
+
+    .item.languages {
+      .content-container {
+        text-align: left;
+      }
+    }
+
+
+    img.bg {
+      width: 70px;
+    }
+
+    img.locked {
+      margin-top: -140px;
+      margin-right: -90px;
+      width: 14px;
+    }
+
+  }
+
+
+  .lab-tooltip-common ul {
+      padding:0;
+  }
+
+
+}
+
+@media only screen and (max-width : 768px) {
+  .common {
+    .title-container {
+      margin-left: 30px;
+    }
+    table.visible-xs {
+      display: table !important;
+    }
+    .item {
+      min-height: initial;
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+@media only print {
+  .common {
+    .title-container{
+
+        h3 {
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-style: italic;
+        padding: 20px;
+        text-align: center;
+      }
+    }
+
+    table {
+      display: none !important;
+    }
+
+    table.print {
+      display: block !important;
+      width: 569px;
+      margin: auto;
+      .item {
+        text-align: center;
+        padding: 20px 0;
+        width: 33%;
+      }
+      .title {
+        padding: 5px;
+      }
+
+
+      .img-container {
+
+        width: 70px;
+        height: 70px;
+        margin: auto;
+        img.bg {
+          border-radius: 100px;
+        }
+      }
+
+      .title {
+        padding: 5px;
+      }
+
+
+      .img-container {
+        .number {
+          font-size: 46px;
+          margin-top: -65px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

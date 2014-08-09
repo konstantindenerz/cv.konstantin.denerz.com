@@ -1,0 +1,361 @@
+@import 'core';
+
+.skills {
+  height: 790px;
+  @skills-bg: #e8e8e7;
+  @skills-bg-second: #f2f2f2;
+  background: @skills-bg;
+  background: -moz-linear-gradient(top, @skills-bg-second 0%, @skills-bg 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@skills-bg-second), color-stop(100%,@skills-bg)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, @skills-bg-second 0%,@skills-bg 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  @skills-bg-second 0%, @skills-bg 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  @skills-bg-second 0%, @skills-bg 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  @skills-bg-second 0%, @skills-bg 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{skills-bg-second}', endColorstr='@{skills-bg}',GradientType=0 ); /* IE6-9 */
+
+  .title-container {
+    background: #60bcda;
+    cursor:default;
+    font-size: 23px;
+    text-align: center;
+    letter-spacing: 5px;
+    width: 200px;
+    height: 65px;
+    padding-top: 20px;
+    margin-left: 65px;
+    h3 {
+      margin: 0;
+    }
+  }
+
+  .subtitle-container {
+    h4 {
+      cursor:default;
+      text-align: center;
+      color: #333333;
+
+      font-size: 23px;
+      padding-top: 10px;
+      letter-spacing: 5px;
+      margin: 0;
+    }
+  }
+
+  .help-bar {
+    .help.icon{
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      border: 1px solid #999;
+      margin: -40px 20px 20px auto;
+      .text {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  .node {
+    cursor: pointer;
+  }
+
+  .node [data-selected=true] {
+    stroke: black;
+    stroke-width: 1px;
+  }
+
+  .link {
+    stroke: #999;
+    stroke-opacity: .6;
+  }
+
+  .graph {
+    height: 600px;
+    width: 600px;
+    margin: auto;
+  }
+
+  .settings {
+    margin: auto;
+    width: 310px;
+    opacity: 0.4;
+    display: none;
+    .icon {
+    }
+    .icon,
+    img {
+      width: 40px;
+      display: inline;
+    }
+    select {
+      width: 240px;
+      margin-left: 10px;
+      border: none;
+    }
+  }
+
+  .lists {
+    padding-top: 20px;
+    position: absolute;
+
+    .nav {
+      padding: 0 5px;
+      li {
+        .icon {
+          width: 40px;
+        }
+
+        img {
+          width: 40px;
+          display: inline;
+        }
+      }
+
+      li.active a {
+        border: 1px solid #ddd;
+        border-bottom: 1px solid transparent;
+        background-color: #F5F5F5;
+      }
+
+    }
+
+    .type {
+      margin-top: 20px;
+      float:left;
+      min-height: 400px;
+      width: 200px;
+      background: rgba(245,245,245,0.4);
+      display: none;
+
+      ul {
+
+        padding:0;
+        padding-left: 20px;
+        margin: 0;
+        list-style-type:none;
+        li {
+          cursor: default;
+          width: 180px;
+          padding:2px;
+          margin: 3px;
+          .placeholder,
+          img {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 5px;
+            margin-top: -2px;
+          }
+
+          .color-mapping {
+            width: 10px;
+            height: 10px;
+            display:inline-block;
+            margin:0 5px;
+            border-radius: 30px;
+          }
+
+        }
+        li:hover {
+          box-shadow: 0 0 3px rgba(100, 100, 100, 0.4);
+          background: @skills-bg;
+        }
+      }
+      .more {
+        cursor: default;
+        padding-left: 55px;
+        text-decoration: underline;
+        font-style: italic;
+        width: 200px;
+      }
+    }
+    .type.right {
+      margin-right:30px;
+      float: right;
+    }
+
+  }
+
+  .settings:hover {
+    opacity: 1;
+  }
+
+  .more-stuff {
+    padding-left: 40px;
+    z-index: 100;
+
+    .process{
+      img {
+        width:70px;
+      }
+    }
+
+    .os{
+      img {
+        width:70px;
+      }
+    }
+  }
+
+  .more-stuff > * {
+    width: 70px;
+    height: 70px;
+    float:left;
+    margin:48px 10px;
+  }
+}
+
+
+.lab-tooltip .os-details{
+  td {
+    width: 130px;
+    text-align: center;
+  }
+  .icons {
+    img {
+      width: 40px;
+    }
+  }
+  .labels {
+    td {
+      padding: 5px;
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .skills {
+    height: 870px;
+    .title-container {
+      margin-left: 30px;
+    }
+    .graph {
+      height: 450px;
+      width: 450px;
+    }
+    .settings {
+      display: block;
+    }
+
+    .lists {
+      display: none;
+    }
+
+    .more-stuff-small .more-stuff{
+      padding:0;
+      text-align: center;
+    }
+    .more-stuff-small .more-stuff>* {
+      margin: 40px 10px 0 10px;
+      display: inline-block;
+      float:none;
+    }
+  }
+}
+
+.skills-help {
+  .item {
+    color: @text-dark;
+    border-radius: 50px;
+    width: 80px;
+    min-height: 150px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+
+    .ref {
+      height: 40px;
+    }
+    .title {
+      p {
+        margin:0;
+      }
+    }
+    img {
+      max-width: 30px;
+      max-height: 30px;
+    }
+
+    .circle {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background: white;
+      border: 1px solid gray;
+      border-radius: 30px;
+      text-align: center;
+      img {
+        width: 23px;
+      }
+    }
+    .circle.project {
+      img {
+        width: 25px;
+      }
+    }
+
+    .circle.project.short {
+      width:15px;
+      height:15px;
+      img {
+        margin-top: -9px;
+        margin-left: -2px;
+        width: 17px;
+      }
+    }
+
+    .circle.project.long {
+      width:35px;
+      height:35px;
+      img {
+        margin-top:3px;
+        width: 40px;
+      }
+    }
+  }
+
+  mark {
+    color: #2ca3cb;
+    background-color: transparent;
+    display: inline-block;
+  }
+
+  .description {
+    line-height: 10px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .skills {
+    height: 690px;
+    .graph {
+      height: 250px;
+      width: 250px;
+    }
+    .settings {
+      display: block;
+    }
+
+  }
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+  .skills {
+    .graph {
+      width: 230px;
+      height: 230px;
+    }
+    .settings {
+      display: block;
+    }
+    .lists {
+      display: none;
+    }
+  }
+
+}

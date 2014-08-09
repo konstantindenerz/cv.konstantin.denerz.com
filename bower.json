@@ -1,0 +1,23 @@
+{
+  "name": "kod.cv",
+  "version": "0.0.0",
+  "homepage": "https://github.com/konstantindenerz/core",
+  "authors": [
+    "konstantindenerz <konstantin.denerz+github@googlemail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "d3": "~3.4.9",
+    "jquery": "1.10",
+    "jquery-ui": "~1.11.0"
+  }
+}

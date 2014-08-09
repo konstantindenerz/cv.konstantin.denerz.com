@@ -1,0 +1,19 @@
+@media only print {
+  body .container > * {
+    display:none;
+  }
+
+  .print-content {
+    display: block !important;
+    text-align: center;
+    font-size: 46px;
+    padding-top: 100px;
+    padding-bottom:40px;
+  }
+}
+
+@media not print {
+  .print-content {
+    display: none;
+  }
+}

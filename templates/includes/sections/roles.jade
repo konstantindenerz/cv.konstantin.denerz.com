@@ -1,0 +1,42 @@
+.roles
+  h3 my roles in selected projects
+  .mapping.content
+    .brain-animation-container.hidden-xs
+      include svg/brain-animation.svg
+    .brain-animation-container.visible-xs
+      include svg/brain-animation-small.svg
+    .brain-labels
+      img.brainside.hidden-xs(src='style/assets/css/brain/brain-labels-right.png#{rev}')
+      img.brainside.active.hidden-xs(src='style/assets/css/brain/brain-labels-left.png#{rev}')
+      img.visible-xs(src='style/assets/css/brain/brain-labels-xs.png#{rev}')
+    .brain
+      .view.left.active
+        .cerebellum-left
+          img(src='style/assets/css/brain/cerebellum-left.png#{rev}')
+        .right
+          img(src='style/assets/css/brain/right-bg.png#{rev}')
+        .left.fg
+          img(src='style/assets/css/brain/left-fg.png#{rev}')
+      .view.right
+        .cerebellum-right
+          img(src='style/assets/css/brain/cerebellum-right.png#{rev}')
+        .left
+          img(src='style/assets/css/brain/left-bg.png#{rev}')
+        .right.fg
+          img(src='style/assets/css/brain/right-fg.png#{rev}')
+    .role-to-brain
+      ul.brain-right.col-xs-12.hidden-sm.hidden-md.hidden-lg
+        li Photographer
+        li Graphic Designer
+        li Hacker
+        li UI Designer
+      ul.brain-both.col-xs-12.hidden-sm.hidden-md.hidden-lg
+        li Project Manager
+        li Consultant
+        li Team Leader
+      ul.brain-left.active.col-xs-12.hidden-sm.hidden-md.hidden-lg
+        li Software Architect
+        li Coder
+        li Product Manager
+      .clearfix
+    .clearfix

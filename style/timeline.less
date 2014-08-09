@@ -1,0 +1,254 @@
+@import 'core';
+
+@media not print {
+
+  .timeline {
+    padding-bottom: 70px;
+    table {
+      width: 100%;
+    }
+    .amp {
+      color: #353b40;
+      word-break: break-word;
+    }
+    .container-title {
+    	text-align: center;
+    	font-size: 23px;
+    	height: 65px;
+    	letter-spacing: 5px;
+
+      .title {
+        width: 200px;
+        padding-top: 20px;
+        height: 100%;
+        letter-spacing: 5px;
+        font-size: 23px;
+      }
+
+    }
+
+    .event {
+      color: #cdd2d7;
+      cursor: pointer;
+      .duration {
+        text-align: center;
+        background: url('@{assets}/timeline-line.png@{rev}') center top repeat-y;
+        img{
+          height: 35px;
+          margin: auto;
+          display: inline-block;
+        }
+      }
+
+      .duration.short img {
+        height: 25px;
+      }
+
+      .duration.long img {
+        height: 50px;
+      }
+
+      .duration.max img {
+        height: 65px;
+      }
+
+      .arrow-container {
+        width: 10px;
+        .arrow {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width:5px 10px 5px 0;
+          border-color:transparent #454c52 transparent transparent
+        }
+      }
+
+      .description {
+        padding: 7px 7px 7px 0;
+        .inner-container {
+          min-height: 65px;
+          border: 1px solid #495257;
+          border-radius: 5px;
+          box-shadow: 0 0 15px rgba(0,0,0,0.7);
+          h4 {
+            border-radius: 4px;
+            font-size: 30px;
+            text-shadow: 1px 1px 0 #353b40;
+            background-color: #454c52;
+            background: -moz-linear-gradient(-45deg,  rgba(81,89,96,0) 0%, rgba(81,89,96,0.77) 77%, rgba(90,101,108,1) 100%),
+            -moz-linear-gradient(-45deg,  rgba(87,97,104,1) 0%, rgba(87,97,104,1) 1%, rgba(84,93,100,0) 51%, rgba(81,89,96,0) 90%);
+            background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(81,89,96,0)), color-stop(77%,rgba(81,89,96,0.77)), color-stop(100%,rgba(90,101,108,1))),
+            -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(87,97,104,1)), color-stop(1%,rgba(87,97,104,1)), color-stop(51%,rgba(84,93,100,0)), color-stop(90%,rgba(81,89,96,0)));
+            background: -webkit-linear-gradient(-45deg,  rgba(81,89,96,0) 0%,rgba(81,89,96,0.77) 77%,rgba(90,101,108,1) 100%),
+            -webkit-linear-gradient(-45deg,  rgba(87,97,104,1) 0%,rgba(87,97,104,1) 1%,rgba(84,93,100,0) 51%,rgba(81,89,96,0) 90%);
+            background: -o-linear-gradient(-45deg,  rgba(81,89,96,0) 0%,rgba(81,89,96,0.77) 77%,rgba(90,101,108,1) 100%),
+            -o-linear-gradient(-45deg,  rgba(87,97,104,1) 0%,rgba(87,97,104,1) 1%,rgba(84,93,100,0) 51%,rgba(81,89,96,0) 90%);
+            background: -ms-linear-gradient(-45deg,  rgba(81,89,96,0) 0%,rgba(81,89,96,0.77) 77%,rgba(90,101,108,1) 100%),
+            -ms-linear-gradient(-45deg,  rgba(87,97,104,1) 0%,rgba(87,97,104,1) 1%,rgba(84,93,100,0) 51%,rgba(81,89,96,0) 90%);
+            background: linear-gradient(135deg,  rgba(81,89,96,0) 0%,rgba(81,89,96,0.77) 77%,rgba(90,101,108,1) 100%),
+            linear-gradient(135deg,  rgba(87,97,104,1) 0%,rgba(87,97,104,1) 1%,rgba(84,93,100,0) 51%,rgba(81,89,96,0) 90%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00515960', endColorstr='#5a656c',GradientType=1 ),
+            progid:DXImageTransform.Microsoft.gradient( startColorstr='#576168', endColorstr='#00515960',GradientType=1 );
+
+            height: 100%;
+            margin: 0;
+            padding:15px;
+            letter-spacing: 2px;
+            word-wrap: break-word;
+          }
+
+          .more {
+            background: #32383c;
+            padding: 15px;
+            color: #E6E6E6;
+            cursor: default;
+
+            address {
+              font-style: italic;
+              font-weight: bold;
+            }
+
+            a,
+            a:visited
+            a:hover
+            a:link
+            a:focus
+            a:active {
+              color: #2ca3cb;
+            }
+
+            .stack {
+              mark {
+                color: inherit;
+                margin-right: 5px;
+                background: none;
+                text-decoration:underline;
+              }
+            }
+
+          }
+        }
+      }
+      .state-container {
+        vertical-align: top;
+        padding-top: 35px;
+        padding-right: 40px;
+        .state {
+          background: url("@{assets}/timeline-click-state-closed.png@{rev}") center center no-repeat;
+          height: 12px;
+          width: 12px;
+          margin-left: -42px;
+        }
+      }
+
+    }
+
+     .event.end .duration {
+      background: url('@{assets}/timeline-line-end.png@{rev}') center bottom no-repeat;
+    }
+
+    .event.start .duration {
+      background: url('@{assets}/timeline-start.png@{rev}') center top no-repeat;
+    }
+
+    .event:hover {
+      color: white;
+    }
+
+    .event.selected {
+      color: white;
+      h4 {
+        border-bottom-left-radius:0 !important;
+        border-bottom-right-radius:0 !important;
+      }
+      .state {
+        background-image: url("@{assets}/timeline-click-state-opened.png@{rev}")
+      }
+    }
+
+  }
+
+
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .timeline {
+    .event {
+      h4 {
+        font-size: 16px !important;
+        line-height: 35px;
+      }
+      .state-container  {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+  .timeline {
+    .event {
+      h4 {
+        font-size: 16px !important;
+        line-height: inherit;
+      }
+    }
+  }
+}
+
+@media only print {
+  .timeline {
+    text-align: center;
+    .container-title {
+      .title {
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-style: italic;
+        padding: 20px;
+      }
+    }
+    table {
+      width: 100%;
+    }
+    .event {
+
+      .duration {
+        display: none;
+      }
+
+      .description {
+        h4 {
+          padding-top: 20px;
+          text-align: center;
+          font-size: 24px;
+          letter-spacing: 2px;
+        }
+        .more {
+          display: block !important;
+
+          .content-container {
+            visibility: visible;
+          }
+
+          .content-container > * {
+            text-align: justify;
+          }
+
+          .content-container > address {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

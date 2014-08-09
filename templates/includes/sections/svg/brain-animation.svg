@@ -1,0 +1,16 @@
+<svg class='brain-animation' width="670px" height="320px" viewBox="0 0 670 320"
+     version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     preserveAspectRatio="xMinYMin meet"> <!-- Note that this is required in order to use xlink in the <use> element. -->
+  <g transform="translate(334, 163)">
+    <circle cx="0" cy="0" r="150" style="fill:rgba(0,0,0,0);stroke:#626d75; stroke-width:4; stroke-dasharray:118, 18;">
+      <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0" to="-360" begin="0" dur="60s" repeatCount="indefinite" />
+    </circle>
+       <circle cx="0" cy="0" r="120" style="fill:rgba(0,0,0,0);stroke:#626d75; stroke-width:5; stroke-dasharray:148, 18;">
+      <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0" to="360" begin="0" dur="15s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="80" style="fill:rgba(0,0,0,0);stroke:#626d75; stroke-width:2; stroke-dasharray:80, 88;">
+      <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0" to="-360" begin="0" dur="35s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

@@ -1,0 +1,257 @@
+@import 'core';
+.footer {
+  height: 60px;
+  text-align:center;
+  table {
+    width: 100%;
+  }
+  .footer-center {
+    background: url('@{assets}/footer.jpg@{rev}') left top no-repeat;
+  }
+  .footer-left,
+  .footer-right{
+    width:15px;
+    height:60px;
+  }
+  .footer-left {
+    background: url('@{assets}/footer-left.png@{rev}') left top no-repeat;
+  }
+  .footer-right {
+    background: url('@{assets}/footer-right.png@{rev}') left top no-repeat;
+  }
+
+    .container-kopi {
+      margin-top: -273px;
+      float: right;
+      margin-right: 100px;
+      z-index: 42;
+      .kopi {
+        margin-top: 0;
+        margin-bottom: -50px;
+        bottom: -28px;
+        width: 170px;
+        z-index: 20;
+      }
+      img.emc2 {
+        position: absolute;
+        width: 200px;
+        margin-top: -100px;
+        margin-left: -20px;
+      }
+    }
+
+    .container-chalk {
+      float:left;
+      .chalk {
+        margin-left: 100px;
+        width: 200px;
+        position: absolute;
+        margin-top: -42px;
+      }
+    }
+
+  .copyright {
+    cursor:default;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: -1px -1px 0 #c99572, 1px 1px 0 #c99572;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #282727;
+    font-size: 10px;
+    padding-top: 5px;
+  }
+
+    /* animation definition */
+@-webkit-keyframes coffee-steam-animation {
+  from {
+      opacity:0;
+      -webkit-transform: translatey(30px);
+  }
+  50% {
+      opacity:1;
+      -webkit-transform: translatey(-10px);
+  }
+  to {
+      opacity:0.2;
+      -webkit-transform: translatey(-40px);
+  }
+}
+
+@-moz-keyframes coffee-steam-animation {
+  from {
+      opacity:0;
+      -moz-transform: translatey(30px);
+  }
+  50% {
+      opacity:1;
+      -moz-transform: translatey(-10px);
+  }
+  to {
+      opacity:0.2;
+      -moz-transform: translatey(-40px);
+  }
+}
+
+@keyframes coffee-steam-animation {
+  from {
+      opacity:0;
+      transform: translatey(30px);
+  }
+  50% {
+      opacity:1;
+      transform: translatey(-10px);
+  }
+  to {
+      opacity:0.2;
+      transform: translatey(-40px);
+  }
+}
+
+/* assign animation to each div element*/
+.smoke {
+  -webkit-animation-name: coffee-steam-animation;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 3s;
+  -moz-animation-name: coffee-steam-animation;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 3s;
+  animation-name: coffee-steam-animation;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  width:200px;
+  height:200px;
+  z-index:0;
+  position:absolute;
+  margin-left: -20px;
+  margin-top: -140px;
+}
+
+.smoke-1{
+  background: url('@{assets}/smoke-1.png@{rev}') no-repeat center center;
+  background-size: cover;
+  -webkit-animation-delay:0s;
+  -moz-animation-delay:0s;
+  animation-delay:0s;
+}
+
+.smoke-2{
+  background: url('@{assets}/smoke-2.png@{rev}') no-repeat center center;
+  background-size: cover;
+  -webkit-animation-delay:1.5s;
+  -moz-animation-delay:1.5s;
+  animation-delay:1.5s;
+
+}
+
+.smoke-3{
+  background: url('@{assets}/smoke-3.png@{rev}') no-repeat center center;
+  background-size: cover;
+  -webkit-animation-delay:0.5s;
+  -moz-animation-delay:0.5s;
+  animation-delay:0.5s;
+}
+
+.smoke-4{
+  background: url('@{assets}/smoke-3.png@{rev}') no-repeat center center;
+  background-size: cover;
+  -webkit-animation-delay:2.0s;
+  -moz-animation-delay:2.0s;
+  animation-delay:2.0s;
+}
+
+
+}
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .footer {
+    .container-kopi {
+
+      margin-top: -230px;
+      margin-right: 50px;
+      .kopi {
+        width: 140px;
+      }
+      .smoke {
+        margin-left: 0;
+        width: 140px;
+        height: 140px;
+      }
+    }
+    .container-chalk {
+      .chalk {
+        margin-left: 120px;
+        width: 100px;
+        margin-top: -32px;
+      }
+    }
+  }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+  .footer {
+    .container-kopi {
+      .smoke {
+        margin-left: -15px;
+        margin-top: -120px;
+      }
+      margin-top: -200px;
+      margin-right: 10px;
+      .kopi {
+        width: 120px;
+      }
+      img.emc2 {
+        width: 120px;
+        margin-top: -70px;
+        margin-left: 0;
+      }
+    }
+
+    .container-chalk {
+      .chalk {
+        margin-left: 0;
+      }
+    }
+    .copyright {
+      padding-top:0;
+    }
+  }
+}
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+  .footer {
+    .container-kopi {
+      margin-top: -200px;
+      margin-right: 10px;
+      .smoke {
+        margin-left: -15px;
+        margin-top: -120px;
+      }
+      .kopi {
+        width: 120px;
+      }
+    }
+
+    .container-chalk {
+      .chalk {
+        margin-left: 0;
+      }
+    }
+    .copyright {
+      padding-top:0;
+    }
+  }
+}

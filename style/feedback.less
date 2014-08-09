@@ -1,0 +1,73 @@
+@import 'core';
+
+@media not print {
+  .feedback {
+    cursor: pointer;
+    color: @text-light;
+    a,
+    a:hover,
+    a:active,
+    a:focus,
+    a:visited{
+      color: @text-light;
+      text-decoration: underline;
+    }
+    .inner-container {
+      max-width: 300px;
+      background-color: #74447b;
+      background-color: rgba(255,0,255,0.2);
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      .button {
+        float: left;
+        padding: 20px 10px;
+        img {
+          width: 18px;
+        }
+      }
+      .form {
+        padding: 10px;
+        float: left;
+        width: 250px;
+        margin-top: 30px;
+      }
+    }
+    padding: 20px 0 20px 20px;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 50042;
+  }
+
+  .feedback:hover {
+    .inner-container {
+      background-color: rgba(116,68,123,0.9);
+    }
+  }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) and (orientation: landscape) {
+  .feedback {
+    top: 20%;
+  }
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) and (orientation: landscape) {
+  .feedback {
+    top: 20%;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+@media only print {
+  .feedback {
+    display: none;
+  }
+}

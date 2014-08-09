@@ -1,0 +1,109 @@
+.skills
+  .title-container
+    h3 Skills
+  .help-bar
+    .help.icon
+      .text ?
+      .tooltip-content Show an explanation of the current graph.
+  .subtitle-container
+    h4 Mapping to projects and products
+  table.settings
+    tr.type.language
+      td.icon(data-tooltip)
+        img(src='style/assets/css/language.png#{rev}')
+        .tooltip-content Languages
+      td
+        select
+    tr.type.technology
+      td.icon(data-tooltip)
+        img(src='style/assets/css/technology.png#{rev}')
+        .tooltip-content Technologies
+      td
+        select
+    tr.type.tool
+      td.icon(data-tooltip)
+        img(src='style/assets/css/tool.png#{rev}')
+        .tooltip-content Tools
+      td
+        select
+  .lists
+    ul.nav.nav-tabs
+      li.language.active.icon(data-tooltip)
+        a(href='#language')
+          img(src='style/assets/css/language.png#{rev}')
+          .tooltip-content Languages
+      li.technology.icon(data-tooltip)
+        a(href='#technology')
+          img(src='style/assets/css/technology.png#{rev}')
+          .tooltip-content Technologies
+      li.tool.icon(data-tooltip)
+        a(href='#tool')
+          img(src='style/assets/css/tool.png#{rev}')
+          .tooltip-content Tools
+    .type.language
+      ul
+      .more(data-tooltip) more
+        .tooltip-content
+          ul
+            li C#
+            li Ruby
+            li Scala
+            li ObjectPascal
+            li C++
+            li VB 5/6
+            li VB.NET
+            li UML
+    .type.tool
+      ul
+      .more(data-tooltip) more
+        .tooltip-content
+          ul
+            li Vim
+            li Office
+            li Intellij IDEA
+    .type.technology
+      ul
+      .more(data-tooltip) more
+        .tooltip-content
+          ul
+            li MongoDB
+            li Yeoman
+            li AngularJS
+    mixin morestuff
+      .more-stuff
+        .process(data-tooltip)
+          img(src='style/assets/css/process.png#{rev}')
+          .tooltip-content
+            h5
+              em Processes
+            ul
+             li Scrum
+             li
+               span Agile Product Management &nbsp;
+               span.amp &amp; &nbsp;
+               span Development
+             li Project Management
+             li TDD
+        .os(data-tooltip)
+          img(src='style/assets/css/os.png#{rev}')
+          .tooltip-content
+            table.os-details
+              tr.icons
+                td
+                  img(src='style/assets/css/os-osx.png#{rev}')
+                td
+                  img(src='style/assets/css/os-ubuntu.png#{rev}')
+                td
+                  img(src='style/assets/css/os-win.png#{rev}')
+              tr.labels
+                td OSX
+                td Ubuntu
+                td
+                  span Windows &nbsp;
+                  span.amp &amp; &nbsp;
+                  span Server
+    .clearfix
+    +morestuff()
+  .graph
+  .more-stuff-small.visible-xs-block
+    +morestuff()

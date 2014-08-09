@@ -1,0 +1,117 @@
+mixin education
+  .item.education
+    .img-container
+      img.bg(src='style/assets/css/button-education.png#{rev}')
+    .arrow
+    .content-container
+      p ASW-Berufsakademie Saarland e.V.
+      p Subject: Business Information Systems
+      strong Degree: Diplom-Wirtschaftsinformatiker (BA-Saarland)
+mixin languages
+  .item.languages
+    .img-container
+      img.bg(src='style/assets/css/button-languages.png#{rev}')
+    .arrow
+    .content-container
+      ul
+        li German (native)
+        li English
+        li Russian
+mixin projects
+  .item.projects
+    .title Selected Projects
+    .img-container
+      img.bg(src='style/assets/css/measure-bg-private.png#{rev}')
+      .number(data-value=15) 0
+      img.locked(src='style/assets/css/locked.png#{rev}')
+    .arrow
+    .content-container
+      p Contact me to get more information about this section.
+mixin products
+  .item.products
+    .title Selected Products
+    .img-container
+      img.bg(src='style/assets/css/measure-bg-private.png#{rev}')
+      .number(data-value=5) 0
+      img.locked(src='style/assets/css/locked.png#{rev}')
+    .arrow
+    .content-container
+      p Contact me to get more information about this section.
+mixin customers
+  .item.customers
+    .title Selected Customers
+    .img-container
+      img.bg(src='style/assets/css/measure-bg-private.png#{rev}')
+      .number(data-value=12) 0
+      img.locked(src='style/assets/css/locked.png#{rev}')
+    .arrow
+    .content-container
+      p Contact me to get more information about this section.
+.common
+  .inner-common.content
+    .title-container
+      h3 Common
+    table.hidden-xs
+      tr
+        td.col-xs-4
+          +education()
+        td.col-xs-4
+        td.col-xs-4
+          +languages()
+      tr
+        td.col-xs-4
+          +projects()
+        td.col-xs-4
+          +products()
+        td.col-xs-4
+          +customers()
+    table.visible-xs
+      tr
+        td
+          +education()
+      tr
+        td
+          +languages()
+      tr
+        td
+          +projects()
+      tr
+        td
+          +products()
+      tr
+        td
+          +customers()
+    table.print
+      tr
+        td.item.education
+          .img-container
+            img.bg(src='style/assets/css/button-education.png#{rev}')
+        td.content-container(colspan='2')
+          p ASW-Berufsakademie Saarland e.V.
+          p Subject: Business Information Systems
+          strong Degree: Diplom-Wirtschaftsinformatiker (BA-Saarland)
+      tr
+        td.item.languages
+            .img-container
+              img.bg(src='style/assets/css/button-languages.png#{rev}')
+        td.content-container(colspan='2')
+          ul
+            li German (native)
+            li English
+            li Russian
+      tr
+        td.item.projects
+          .title Selected Projects
+          .img-container
+            img.bg(src='style/assets/css/measure-bg-private.png#{rev}')
+            .number(data-value=15) 15
+        td.item.projects
+          .title Selected Products
+          .img-container
+            img.bg(src='style/assets/css/measure-bg-private.png#{rev}')
+            .number(data-value=5) 5
+        td.item.projects
+          .title Selected Customers
+          .img-container
+            img.bg(src='style/assets/css/measure-bg-private.png#{rev}')
+            .number(data-value=12) 12

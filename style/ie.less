@@ -1,0 +1,34 @@
+#browser-version[data-browser-version='ie-7'],
+#browser-version[data-browser-version='ie-8'],
+#browser-version[data-browser-version='ie-9'] {
+  .brain-image {
+    display: inline;
+  }
+  .brain-animation {
+    display: none;
+  }
+
+
+  /* Small Devices, Tablets */
+  @media only screen and (max-width : 768px) {
+    .brain-image {
+      width: 400px;
+    }
+  }
+
+  /* Extra Small Devices, Phones */
+  @media only screen and (max-width : 480px) {
+    .brain-image {
+      width: 300px;
+    }
+  }
+
+
+
+  /* Custom, iPhone Retina */
+  @media only screen and (max-width : 320px) {
+    .brain-image {
+      width: 200px;
+    }
+  }
+}

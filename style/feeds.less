@@ -1,0 +1,96 @@
+@import 'core';
+@feeds-color: #f9f9f9;
+.feeds {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: @feeds-color;
+  .container-title {
+    cursor:default;
+    font-family: quicksandregular;
+    color: #8c8c8c;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding-top: 15px;
+  }
+  .github {
+    background: url('@{assets}/github.png@{rev}') center center no-repeat rgba(100,100,100,0.1);
+    padding: 0;
+    .container-title {
+      padding-left: 15px;
+    }
+    .projects {
+      min-height: 520px;
+      .item {
+        margin: 0;
+        padding: 10px 15px;
+        .title {
+          font-size: 18px;
+          letter-spacing: 2px;
+          display: inline-block;
+          a,
+          a:hover
+          a:focus
+          a:active {
+            color: @feeds-color;
+          }
+          .heart {
+            font-size: 12px;
+            margin-left: 10px;
+            line-height: 20px;
+            color: #2ca3cb;
+          }
+        }
+        .description {
+          font-style: italic;
+          font-size: 14px;
+          font-weight: 100;
+          letter-spacing: 1px;
+          color: darken(@feeds-color, 30%);
+        }
+
+        .languages {
+          color: darken(@feeds-color, 30%);
+          img {
+            width: 20px;
+            padding-bottom: 3px;
+            margin-right: 10px;
+          }
+          span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .twitter {
+    min-height: 520px;
+    background: url('@{assets}/twitter.png@{rev}') center center no-repeat;
+    .tweets {
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .feeds {
+    .github {
+      .projects {
+        min-height: initial;
+      }
+    }
+  }
+
+}
+
+@media only print {
+  .feeds {
+    display: none;
+  }
+}

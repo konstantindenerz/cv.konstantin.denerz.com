@@ -1,0 +1,16 @@
+include includes/internal-comment
+doctype html
+html
+  include includes/head
+body
+  <!--[if lt IE 7 ]><div id='browser-version' data-browser-version='ie-6'><![endif]-->
+  <!--[if IE 7 ]><div id='browser-version' data-browser-version='ie-7'><![endif]-->
+  <!--[if IE 8 ]><div id='browser-version' data-browser-version='ie-8'><![endif]-->
+  <!--[if IE 9 ]><div id='browser-version' data-browser-version='ie-9'><![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--><div id='browser-version' data-browser-version='modern'> <!--<![endif]-->
+  include includes/sidebar
+  .container
+    include includes/sections
+
+  </div>
+  include includes/sections/google.html

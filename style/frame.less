@@ -1,0 +1,91 @@
+@import 'core';
+
+body {
+  background: #52555a;
+  font-family: quicksandregular;
+  margin: 0;
+  padding: 0;
+}
+
+.row.inner {
+  background: @row-inner-bg url("@{assets}/container-bg-dark.png@{rev}") left top repeat;
+  margin-left: 0;
+  margin-right: 0;
+  color: @text-light;
+}
+
+
+
+.separator {
+	height: 5px;
+
+  .left-bottom {
+    background: url('@{assets}/bg-line-left-bottom.png@{rev}') right top no-repeat;
+    height: 5px;
+    width: 15px;
+    margin-left: -15px;
+  }
+
+  .right-bottom {
+    background: url('@{assets}/bg-line-right-bottom.png@{rev}') left top no-repeat;
+    height: 5px;
+    width: 15px;
+    margin-right: -15px;
+  }
+
+  .left-top {
+    background: url('@{assets}/bg-line-left-top.png@{rev}') right top no-repeat;
+    height: 5px;
+    width: 15px;
+    margin-left: -15px;
+  }
+
+  .left-top-blue {
+    background: url('@{assets}/bg-line-left-top-blue.png@{rev}') right top no-repeat;
+    height: 5px;
+    width: 15px;
+    margin-left: -15px;
+  }
+
+
+  .right-top {
+    background: url('@{assets}/bg-line-right-top.png@{rev}') left top no-repeat;
+    height: 5px;
+    width: 15px;
+    margin-right: -15px;
+  }
+
+  .right-top-blue {
+    background: url('@{assets}/bg-line-right-top-blue.png@{rev}') left top no-repeat;
+    height: 5px;
+    width: 15px;
+    margin-right: -15px;
+  }
+
+
+  .middle {
+    background: #3c4349 url("assets/css/container-bg-dark.png@{rev}") left top repeat-x;
+    height: 100%;
+    width: 100%;
+  }
+
+}
+
+.separator > *{
+	float:left;
+}
+
+.line {
+	background: #353535;
+	height: 1px;
+  margin: 20px 0;
+}
+
+@media only print {
+  .about{
+    page-break-before: left;
+  }
+  .timeline {
+    page-break-before:right;
+  }
+}
